@@ -1,0 +1,46 @@
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>jQuery demo</title>
+ </head>
+ <body>
+   <!--
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+   -->
+   <script type="text/javascript" src="./jqplot/jquery.min.js"></script>
+   <script type="text/javascript" src="./jquery-ui/jquery-ui-1.8.23.custom.min.js"></script>
+   <script type="text/javascript" src="./jqplot/jquery.jqplot.min.js"></script>
+   <script type="text/javascript" src="./jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+   <script type="text/javascript" src="./jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+   <script>
+     $(document).ready(function(){
+         var plot1 = $.jqplot('chart1', [[1, 4, 2, 6, 2, 2]]);
+
+         var plot2 = $.jqplot('chart2', [[5, 3, 3, 1, 6]]);
+     });
+   </script>
+
+<style>
+	#draggable1 { width: 500px; height: 300px; padding: 0.5em; }
+	#draggable2 { width: 500px; height: 300px; padding: 0.5em; }
+	</style>
+	<script>
+	$(function() {
+		$( "#draggable1" ).draggable();
+		$( "#draggable2" ).draggable();
+	});
+	</script>
+
+
+<div id="draggable1" class="ui-widget-content">
+   <div id="chart1" style="height:300px; width:500px;"></div>
+</div>
+
+Test<br/>
+
+<div id="draggable2" class="ui-widget-content">
+   <div id="chart2" style="height:300px; width:500px;"></div>
+</div>
+
+ </body>
+</html>
